@@ -3,8 +3,8 @@ module.exports = {
     return queryInterface.addColumn('users', 'avatar_id', {
       type: Sequelize.INTEGER,
       references: { model: 'files', key: 'id' },
-      onUpdate: 'CASCADE',
-      onDelete: 'SET NULL',
+      onUpdate: 'NO ACTION',
+      onDelete: 'NO ACTION',
       allowNull: true,
     });
   },
